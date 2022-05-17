@@ -1,0 +1,28 @@
+ALGORITHM somme chash
+VAR
+    c:HASH_TABLE<integer,integer>
+    A: ARRAY_OF integer[]:=[3,1,7,9];
+    B: ARRAY_OF integer[]:=[2,4,1,9,3];
+    summ:=integer:=0;
+    i:integer:=0;
+BEGIN
+    FOR i FROM 1 TO A.length STEP 1  DO
+        c.insert(A[i],1);
+    END_FOR
+    FOR i FROM 1 TO B.length STEP 1 
+    IF (c.lookup(B[i]))=true  THEN
+        c.insert(B[i],2)
+        ELSE
+            c.insert(B[i],1)
+        END_IF
+      
+    END_FOR
+    FOR i FROM 1 TO A.length STEP 1 DO
+        c.get (A[i]=2)  THEN
+        summ+a[i]*2
+        END_IF
+    
+    END_FOR
+    write (summ)
+
+END

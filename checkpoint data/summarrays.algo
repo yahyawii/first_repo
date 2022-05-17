@@ -1,0 +1,19 @@
+ALGORITHM sommearray
+VAR
+     A: ARRAY_OF integer[]:=[3,1,7,9];
+    B: ARRAY_OF integer[2,4,1,9,3];
+    sum:integer:=0;
+    i,j: integer;
+BEGIN
+    FOR i FROM 1 TO A.length STEP 1  DO
+        FOR j FROM 1 TO B.length STEP 1  DO
+            IF (A[i] = B[j]) THEN
+                sum = sum + A[i]*2;
+                break;
+            END_IF         
+        END_FOR
+    END_FOR
+
+    Write("La somme est", sum)
+END
+  
